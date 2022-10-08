@@ -9,7 +9,7 @@ public class IntegerMatrix extends GenericMatrix<Integer> {
 
     @Override
     protected String getFormat() {
-        return "%"+formatPaddings+"d";
+        return "%"+getFormatPaddings()+"d";
     }
 
     public IntegerMatrix() {

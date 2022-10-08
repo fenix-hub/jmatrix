@@ -1,11 +1,12 @@
 package com.fenixhub.matrix.classes;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 
 @SuppressWarnings("unchecked")
-abstract class AbstractGenericMatrix<T extends Number> {
+abstract class AbstractGenericMatrix<T extends Number> implements Serializable {
     
-    public int formatPaddings = 4;
+    private int formatPaddings = 4;
 
     protected T[][] array;
 
@@ -28,6 +29,8 @@ abstract class AbstractGenericMatrix<T extends Number> {
     public AbstractGenericMatrix(AbstractGenericMatrix<T> matrix) {
         this.array = matrix.getArrayCopy();
     }
+
+    protected abstract AbstractGenericMatrix<T> copy();
 
     protected abstract void setArray(T[][] array);
 
@@ -83,5 +86,11 @@ abstract class AbstractGenericMatrix<T extends Number> {
 
     protected abstract boolean isDiagonal();
 
-    protected abstract AbstractGenericMatrix<T> copy();
+    public void setFormatPaddings(int formatPaddings) {
+        this.formatPaddings = formatPaddings;
+    }
+
+    public int getFormatPaddings() {
+        return this.formatPaddings;
+    }
 }

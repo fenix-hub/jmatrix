@@ -14,7 +14,7 @@ public class GenericMatrix<T extends Number> extends AbstractGenericMatrix<T> {
 
     @Override
     protected String getFormat() {
-        return "%"+formatPaddings+"s";
+        return "%"+getFormatPaddings()+"s";
     }
 
     public GenericMatrix(Class<T> clazz) {

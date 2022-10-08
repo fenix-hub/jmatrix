@@ -9,7 +9,7 @@ public class DoubleMatrix extends GenericMatrix<Double> {
 
     @Override
     protected String getFormat() {
-        return "%"+formatPaddings+"g";
+        return "%"+getFormatPaddings()+"g";
     }
 
     public DoubleMatrix() {

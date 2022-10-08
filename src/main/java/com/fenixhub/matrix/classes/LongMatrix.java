@@ -9,7 +9,7 @@ public class LongMatrix extends GenericMatrix<Long> {
 
     @Override
     protected String getFormat() {
-        return "%"+formatPaddings+"d";
+        return "%"+getFormatPaddings()+"d";
     }
 
     public LongMatrix() {

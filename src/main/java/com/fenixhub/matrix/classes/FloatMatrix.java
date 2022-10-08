@@ -9,7 +9,7 @@ public class FloatMatrix extends GenericMatrix<Float> {
 
     @Override
     protected String getFormat() {
-        return "%"+formatPaddings+"g";
+        return "%"+getFormatPaddings()+"g";
     }
 
     public FloatMatrix() {
